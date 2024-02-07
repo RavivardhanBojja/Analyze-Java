@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="./swagger-ui.css" />
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+
+  <div id= "main" style="background-color: #1b1b1b;">
+    <div class="max-w-screen-xl mx-auto flex justify-between items-center py-2 px-4">
+      <div class="flex items-center space-x-4"> 
+                <img src="https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg" class="h-50 w-50 rounded-full">
+    </div>
+
+    <label id="property" class="text-lg font-semibold text-purple-300">Property</label>
+    <Label id="environment" class="text-lg font-semibold text-green-300">Environment</label>
+    <label id="username" class="text-lg font-semibold text-blue-300">User</label>
+        <button id="logoutButton" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300 ease-in-out">
+            Sign Out
+        </button>
+    </div>
+</div>
+
+
+
+  <div id="loginModal" class="fixed inset-0 z-50 overflow-auto flex justify-center items-center"
+    style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+    <div class="relative p-8 bg-ai w-full max-w-md m-auto flex-col flex rounded-lg border-glow">
+      <img src = "https://www.capgemini.com/wp-content/themes/capgemini-komposite/assets/images/logo.svg" width = "500px" alt = "Capgemini" class = "swagger-logo self-center">
+      <img src="https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg" width="500px" alt="Swagger"
+        class="swagger-logo self-center"> <!-- Swagger logo -->
+      <span class="absolute top-0 right-0 p-4">
+      </span>
+      <div class="text-left w-full">
+        <form id="loginForm" class="w-full">
+          <div class="mb-5">
+            <label for="uname" class="font-bold mb-1 text-gray-700 block">Username</label>
+            <input type="text" placeholder="Enter Username" name="uname" required
+              class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+              style="color:#00e0ff">
+          </div>
+          <div class="mb-5">
+            <label for="psw" class="font-bold mb-1 text-gray-700 block">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required
+              class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+              style="color:#00e0ff">
+          </div>
+          <div>
+            <button type="submit"
+              class="w-full block bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg px-4 py-3 mt-6"
+              style="background-color:#00e0ff">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="swagger-ui"></div>
+
+
+  <script src="./swagger-ui-bundle.js" charset="UTF-8"> </script>
+  <script src="./swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+  <script src="./index.js"></script>
+  <script>
+

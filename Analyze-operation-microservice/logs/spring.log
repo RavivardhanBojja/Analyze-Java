@@ -1,0 +1,143 @@
+05-02-2024 09:45:36.199 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 20500 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice)
+05-02-2024 09:45:36.207 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: local
+05-02-2024 09:45:36.270 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+05-02-2024 09:45:36.271 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+05-02-2024 09:45:36.272 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+05-02-2024 09:45:36.272 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+05-02-2024 09:45:37.372 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05-02-2024 09:45:37.414 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+05-02-2024 09:45:39.028 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
+05-02-2024 09:45:39.041 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-02-2024 09:45:39.042 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+05-02-2024 09:45:39.226 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+05-02-2024 09:45:39.227 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2955 ms
+05-02-2024 09:45:39.602 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-02-2024 09:45:39.720 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+05-02-2024 09:45:39.947 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+05-02-2024 09:45:40.134 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-02-2024 09:45:40.855 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-02-2024 09:45:40.903 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+05-02-2024 09:45:41.356 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-02-2024 09:45:41.371 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:45:43.039 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
+05-02-2024 09:45:43.083 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 7.506 seconds (JVM running for 9.147)
+05-02-2024 09:46:47.740 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+05-02-2024 09:46:47.792 [RMI TCP Connection(8)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:46:47.798 [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+05-02-2024 09:46:47.816 [RMI TCP Connection(8)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+05-02-2024 09:46:51.476 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 34476 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice)
+05-02-2024 09:46:51.479 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: local
+05-02-2024 09:46:51.545 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+05-02-2024 09:46:51.547 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+05-02-2024 09:46:51.548 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+05-02-2024 09:46:51.548 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+05-02-2024 09:46:52.358 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05-02-2024 09:46:52.374 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+05-02-2024 09:46:53.686 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
+05-02-2024 09:46:53.702 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-02-2024 09:46:53.703 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+05-02-2024 09:46:53.867 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+05-02-2024 09:46:53.868 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2319 ms
+05-02-2024 09:46:54.103 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-02-2024 09:46:54.207 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+05-02-2024 09:46:54.375 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+05-02-2024 09:46:54.507 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-02-2024 09:46:54.898 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-02-2024 09:46:54.922 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+05-02-2024 09:46:55.403 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-02-2024 09:46:55.420 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:46:56.775 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
+05-02-2024 09:46:56.838 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 5.926 seconds (JVM running for 7.13)
+05-02-2024 09:48:33.518 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+05-02-2024 09:48:33.520 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+05-02-2024 09:48:33.523 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
+05-02-2024 09:54:27.826 [RMI TCP Connection(17)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+05-02-2024 09:54:27.865 [RMI TCP Connection(17)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:54:27.870 [RMI TCP Connection(17)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+05-02-2024 09:54:27.882 [RMI TCP Connection(17)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+05-02-2024 09:54:31.683 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 31448 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice)
+05-02-2024 09:54:31.686 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: local
+05-02-2024 09:54:31.742 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+05-02-2024 09:54:31.742 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+05-02-2024 09:54:31.742 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+05-02-2024 09:54:31.743 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+05-02-2024 09:54:32.492 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05-02-2024 09:54:32.515 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+05-02-2024 09:54:34.064 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8012 (http)
+05-02-2024 09:54:34.079 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-02-2024 09:54:34.080 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+05-02-2024 09:54:34.265 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+05-02-2024 09:54:34.267 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2523 ms
+05-02-2024 09:54:34.624 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-02-2024 09:54:34.734 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+05-02-2024 09:54:34.977 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+05-02-2024 09:54:35.126 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-02-2024 09:54:35.662 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-02-2024 09:54:35.696 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+05-02-2024 09:54:36.062 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-02-2024 09:54:36.074 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:54:37.506 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8012 is already in use
+05-02-2024 09:54:37.513 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:54:37.517 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+05-02-2024 09:54:37.528 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+05-02-2024 09:54:37.531 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+05-02-2024 09:54:37.549 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+05-02-2024 09:54:37.567 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8012 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8012 or configure this application to listen on another port.
+
+05-02-2024 09:57:07.007 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 30392 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze\Analyze-operation-microservice)
+05-02-2024 09:57:07.011 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: local
+05-02-2024 09:57:07.068 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+05-02-2024 09:57:07.069 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+05-02-2024 09:57:07.069 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+05-02-2024 09:57:07.069 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+05-02-2024 09:57:07.805 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+05-02-2024 09:57:07.826 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+05-02-2024 09:57:09.264 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8012 (http)
+05-02-2024 09:57:09.283 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+05-02-2024 09:57:09.283 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+05-02-2024 09:57:09.427 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+05-02-2024 09:57:09.428 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2358 ms
+05-02-2024 09:57:09.710 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+05-02-2024 09:57:09.805 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+05-02-2024 09:57:10.003 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+05-02-2024 09:57:10.187 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+05-02-2024 09:57:10.602 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+05-02-2024 09:57:10.618 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+05-02-2024 09:57:10.935 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+05-02-2024 09:57:10.949 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:57:12.380 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8012 is already in use
+05-02-2024 09:57:12.386 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+05-02-2024 09:57:12.391 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+05-02-2024 09:57:12.402 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+05-02-2024 09:57:12.405 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+05-02-2024 09:57:12.421 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+05-02-2024 09:57:12.440 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter.report - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8012 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8012 or configure this application to listen on another port.
+
