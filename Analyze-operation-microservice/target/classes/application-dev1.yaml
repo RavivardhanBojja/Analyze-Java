@@ -18,8 +18,8 @@ spring:
 
   flask:
   api:
-    java_host: "http://localhost:8012"
-    python_host: "http://localhost:8055"
+    javahost: "http://localhost:8012"
+    python_host: http://localhost:8055
 
 apis:
   swagger-url:
@@ -33,6 +33,10 @@ logging:
   file:
     path: "logs/dev1"
     name: "${logging.file.path}/log.log"
+   
+    
 
 server:
   port: 8014
+  
+  AITCG: "http://localhost:8012"

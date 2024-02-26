@@ -1,361 +1,150 @@
-07-02-2024 09:38:43.006 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15h34m4s431ms617µs800ns).
-07-02-2024 09:43:25.498 [http-nio-8014-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Failed to delete defects with IDs: [3]] with root cause
-java.lang.RuntimeException: Failed to delete defects with IDs: [3]
-	at com.capgemini.Analyze.serviceImpl.DefectServiceImpl.deleteDefectsBySolutionIdAndDefectIds(DefectServiceImpl.java:46)
-	at com.capgemini.Analyze.controller.DefectController.deleteDefectsBySolutionIdAndDefectIds(DefectController.java:33)
-	at com.capgemini.Analyze.controller.DefectController$$FastClassBySpringCGLIB$$47003ec9.invoke(<generated>)
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
-	at com.capgemini.Analyze.logging.AspectLogging.logTimeMethod(AspectLogging.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
-	at com.capgemini.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag(FeatureFlagAspect.java:42)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:634)
-	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:624)
-	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:72)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
-	at com.capgemini.Analyze.controller.DefectController$$EnhancerBySpringCGLIB$$b1cf2db9.deleteDefectsBySolutionIdAndDefectIds(<generated>)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at com.capgemini.Analyze.util.CorsFilter.doFilter(CorsFilter.java:34)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-07-02-2024 09:43:25.635 [http-nio-8014-exec-1] ERROR o.a.c.c.C.[Tomcat].[localhost].log - Exception Processing ErrorPage[errorCode=0, location=/error]
-org.apache.catalina.connector.ClientAbortException: java.io.IOException: An established connection was aborted by the software in your host machine
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:353)
-	at org.apache.catalina.connector.OutputBuffer.flushByteBuffer(OutputBuffer.java:783)
-	at org.apache.catalina.connector.OutputBuffer.append(OutputBuffer.java:688)
-	at org.apache.catalina.connector.OutputBuffer.writeBytes(OutputBuffer.java:388)
-	at org.apache.catalina.connector.OutputBuffer.write(OutputBuffer.java:366)
-	at org.apache.catalina.connector.CoyoteOutputStream.write(CoyoteOutputStream.java:96)
-	at org.springframework.util.StreamUtils$NonClosingOutputStream.write(StreamUtils.java:287)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator._flushBuffer(UTF8JsonGenerator.java:2177)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1190)
-	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1008)
-	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:454)
-	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
-	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:124)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:711)
-	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
-	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:385)
-	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:313)
-	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:390)
-	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:249)
-	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:344)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: java.io.IOException: An established connection was aborted by the software in your host machine
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
-	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:132)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:97)
-	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:53)
-	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:532)
-	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:135)
-	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1363)
-	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:766)
-	at org.apache.tomcat.util.net.SocketWrapperBase.writeBlocking(SocketWrapperBase.java:586)
-	at org.apache.tomcat.util.net.SocketWrapperBase.write(SocketWrapperBase.java:530)
-	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.doWrite(Http11OutputBuffer.java:547)
-	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:112)
-	at org.apache.coyote.http11.Http11OutputBuffer.doWrite(Http11OutputBuffer.java:194)
-	at org.apache.coyote.Response.doWrite(Response.java:615)
-	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:340)
-	... 57 common frames omitted
-07-02-2024 09:53:51.587 [RMI TCP Connection(71)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 09:53:51.659 [RMI TCP Connection(71)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 09:53:51.674 [RMI TCP Connection(71)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 09:53:51.686 [RMI TCP Connection(71)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 09:53:55.571 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 9076 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 09:53:55.574 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 09:53:55.632 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 09:53:55.633 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 09:53:55.634 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 09:53:55.635 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 09:53:56.512 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 09:53:56.664 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 141 ms. Found 2 JPA repository interfaces.
-07-02-2024 09:53:58.321 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 09:53:58.341 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 09:53:58.342 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 09:53:58.551 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 09:53:58.552 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2916 ms
-07-02-2024 09:53:58.916 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 09:53:58.998 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 09:53:59.176 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 09:53:59.365 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 09:53:59.758 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 09:53:59.780 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 09:54:00.427 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 09:54:00.445 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 09:54:02.576 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 09:54:02.969 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 8.028 seconds (JVM running for 9.387)
-07-02-2024 09:54:47.701 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 09:54:47.702 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 09:54:47.703 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-07-02-2024 09:55:07.748 [http-nio-8014-exec-6] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 09:55:07.816 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.deleteDefectsBySolutionIdAndDefectIds() Execution time: 63 ms
-07-02-2024 09:57:09.024 [http-nio-8014-exec-7] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 09:57:09.041 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 27 ms
-07-02-2024 10:13:14.700 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 10:13:14.746 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:13:14.753 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 10:13:14.764 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 10:13:18.786 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 24324 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 10:13:18.793 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 10:13:18.898 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 10:13:18.899 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 10:13:18.899 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 10:13:18.900 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 10:13:20.039 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 10:13:20.196 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 142 ms. Found 2 JPA repository interfaces.
-07-02-2024 10:13:21.475 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 10:13:21.484 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 10:13:21.485 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 10:13:21.602 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 10:13:21.604 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2704 ms
-07-02-2024 10:13:21.809 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 10:13:21.865 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 10:13:21.977 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 10:13:22.075 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 10:13:22.430 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 10:13:22.457 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 10:13:23.250 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 10:13:23.269 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:13:24.855 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 10:13:25.068 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 7.015 seconds (JVM running for 8.345)
-07-02-2024 10:13:34.276 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 10:13:34.276 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 10:13:34.278 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 2 ms
-07-02-2024 10:13:43.330 [http-nio-8014-exec-6] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 10:13:43.381 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 49 ms
-07-02-2024 10:14:16.392 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.deleteDefectsBySolutionIdAndDefectIds() Execution time: 117 ms
-07-02-2024 10:14:27.406 [http-nio-8014-exec-8] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 10:14:27.410 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 3 ms
-07-02-2024 10:18:05.727 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 10:18:05.773 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:18:05.777 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 10:18:05.790 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 10:18:09.586 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 20616 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 10:18:09.592 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 10:18:09.699 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 10:18:09.701 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 10:18:09.702 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 10:18:09.703 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 10:18:10.757 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 10:18:10.901 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 133 ms. Found 2 JPA repository interfaces.
-07-02-2024 10:18:12.109 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 10:18:12.126 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 10:18:12.127 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 10:18:12.286 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 10:18:12.287 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2582 ms
-07-02-2024 10:18:12.496 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 10:18:12.551 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 10:18:12.658 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 10:18:12.757 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 10:18:13.092 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 10:18:13.106 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 10:18:13.916 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 10:18:13.934 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:18:15.498 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 10:18:15.759 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 6.921 seconds (JVM running for 8.406)
-07-02-2024 10:18:29.195 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 10:18:29.197 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 10:18:29.198 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-07-02-2024 10:24:19.878 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 10:24:19.902 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:24:19.907 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 10:24:19.918 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 10:24:23.262 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 21572 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 10:24:23.265 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 10:24:23.326 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 10:24:23.326 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 10:24:23.326 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 10:24:23.327 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 10:24:24.080 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 10:24:24.252 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 162 ms. Found 2 JPA repository interfaces.
-07-02-2024 10:24:25.665 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 10:24:25.677 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 10:24:25.678 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 10:24:25.842 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 10:24:25.843 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2515 ms
-07-02-2024 10:24:26.140 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 10:24:26.196 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 10:24:26.336 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 10:24:26.486 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 10:24:26.831 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 10:24:26.853 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 10:24:27.561 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 10:24:27.580 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:24:29.452 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 10:24:29.700 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 7.017 seconds (JVM running for 8.1)
-07-02-2024 10:24:53.365 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 10:24:53.365 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 10:24:53.367 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-07-02-2024 10:28:20.845 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 10:28:20.893 [RMI TCP Connection(14)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:28:20.901 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 10:28:20.917 [RMI TCP Connection(14)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 10:28:24.308 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 16840 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 10:28:24.310 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 10:28:24.394 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 10:28:24.395 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 10:28:24.395 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 10:28:24.395 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 10:28:25.335 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 10:28:25.474 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 127 ms. Found 2 JPA repository interfaces.
-07-02-2024 10:28:26.705 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 10:28:26.715 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 10:28:26.716 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 10:28:26.893 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 10:28:26.893 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2497 ms
-07-02-2024 10:28:27.142 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 10:28:27.220 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 10:28:27.365 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 10:28:27.472 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 10:28:27.824 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 10:28:27.844 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 10:28:28.853 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 10:28:28.872 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:28:30.591 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 10:28:30.850 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 7.188 seconds (JVM running for 8.389)
-07-02-2024 10:28:50.746 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 10:28:50.747 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 10:28:50.748 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-07-02-2024 10:28:50.850 [http-nio-8014-exec-1] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 10:28:50.906 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 55 ms
-07-02-2024 10:31:58.145 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
-07-02-2024 10:31:58.168 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:31:58.171 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-07-02-2024 10:31:58.182 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-07-02-2024 10:32:02.259 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 23064 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
-07-02-2024 10:32:02.262 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
-07-02-2024 10:32:02.335 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
-07-02-2024 10:32:02.335 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
-07-02-2024 10:32:02.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-07-02-2024 10:32:02.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-07-02-2024 10:32:03.401 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-07-02-2024 10:32:03.542 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 129 ms. Found 2 JPA repository interfaces.
-07-02-2024 10:32:04.716 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
-07-02-2024 10:32:04.727 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-07-02-2024 10:32:04.728 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
-07-02-2024 10:32:04.900 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-07-02-2024 10:32:04.901 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2565 ms
-07-02-2024 10:32:05.114 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
-07-02-2024 10:32:05.161 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
-07-02-2024 10:32:05.279 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-07-02-2024 10:32:05.371 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-07-02-2024 10:32:05.720 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-07-02-2024 10:32:05.736 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-07-02-2024 10:32:06.565 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-07-02-2024 10:32:06.575 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-07-02-2024 10:32:08.147 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
-07-02-2024 10:32:08.353 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 6.836 seconds (JVM running for 8.302)
-07-02-2024 10:32:45.381 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-07-02-2024 10:32:45.382 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-07-02-2024 10:32:45.384 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 1 ms
-07-02-2024 10:32:45.487 [http-nio-8014-exec-1] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: defects
-07-02-2024 10:32:45.534 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 45 ms
+26-02-2024 09:17:59.318 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2d13h50m4s409ms201µs800ns).
+26-02-2024 11:30:19.382 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectSignaturesController.geClosedDefectSignaturesBySolutionIds() Execution time: 580 ms
+26-02-2024 12:39:44.738 [RMI TCP Connection(452)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+26-02-2024 12:39:45.790 [RMI TCP Connection(452)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 12:39:45.966 [RMI TCP Connection(452)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+26-02-2024 12:39:46.037 [RMI TCP Connection(452)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+26-02-2024 14:44:48.780 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 7496 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
+26-02-2024 14:44:48.786 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
+26-02-2024 14:44:49.173 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+26-02-2024 14:44:49.174 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+26-02-2024 14:44:49.174 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+26-02-2024 14:44:49.175 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+26-02-2024 14:44:53.871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+26-02-2024 14:44:54.631 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 739 ms. Found 3 JPA repository interfaces.
+26-02-2024 14:45:01.221 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
+26-02-2024 14:45:01.270 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+26-02-2024 14:45:01.271 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+26-02-2024 14:45:01.774 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+26-02-2024 14:45:01.777 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 12600 ms
+26-02-2024 14:45:11.807 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+26-02-2024 14:45:11.994 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+26-02-2024 14:45:13.963 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26-02-2024 14:45:17.546 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+26-02-2024 14:45:19.848 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+26-02-2024 14:45:19.961 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+26-02-2024 14:45:25.045 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26-02-2024 14:45:25.066 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 14:45:40.697 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
+26-02-2024 14:45:41.885 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 54.733 seconds (JVM running for 60.561)
+26-02-2024 14:49:15.134 [http-nio-8014-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-02-2024 14:49:15.139 [http-nio-8014-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+26-02-2024 14:49:15.156 [http-nio-8014-exec-3] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 17 ms
+26-02-2024 14:49:15.292 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 26 ms
+26-02-2024 14:49:15.440 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:15.515 [http-nio-8014-exec-6] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: Defect Knowledge Management
+26-02-2024 14:49:15.537 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 282 ms
+26-02-2024 14:49:15.743 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 226 ms
+26-02-2024 14:49:19.389 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:19.409 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:28.666 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:28.711 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:28.726 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:31.451 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:36.374 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:36.380 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:42.572 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:47.270 [http-nio-8014-exec-3] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:47.295 [http-nio-8014-exec-2] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:50.203 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:49:50.218 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:50:00.450 [http-nio-8014-exec-4] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:52:49.040 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+26-02-2024 14:52:49.115 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 14:52:49.135 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+26-02-2024 14:52:49.161 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+26-02-2024 14:52:54.163 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 23488 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
+26-02-2024 14:52:54.170 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
+26-02-2024 14:52:54.285 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+26-02-2024 14:52:54.285 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+26-02-2024 14:52:54.286 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+26-02-2024 14:52:54.286 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+26-02-2024 14:52:55.510 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+26-02-2024 14:52:55.756 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 227 ms. Found 3 JPA repository interfaces.
+26-02-2024 14:52:57.706 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
+26-02-2024 14:52:57.722 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+26-02-2024 14:52:57.723 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+26-02-2024 14:52:57.935 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+26-02-2024 14:52:57.935 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3647 ms
+26-02-2024 14:52:58.287 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+26-02-2024 14:52:58.412 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+26-02-2024 14:52:58.709 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26-02-2024 14:52:58.915 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+26-02-2024 14:52:59.462 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+26-02-2024 14:52:59.499 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+26-02-2024 14:53:00.730 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26-02-2024 14:53:00.748 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 14:53:03.603 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
+26-02-2024 14:53:04.057 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 10.644 seconds (JVM running for 12.146)
+26-02-2024 14:53:18.200 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-02-2024 14:53:18.202 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+26-02-2024 14:53:18.207 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
+26-02-2024 14:53:18.290 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 7 ms
+26-02-2024 14:53:18.373 [http-nio-8014-exec-2] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:53:23.968 [http-nio-8014-exec-3] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:53:37.283 [http-nio-8014-exec-4] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:53:37.290 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:55:25.895 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:55:32.865 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:55:32.875 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 14:56:03.786 [http-nio-8014-exec-3] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:14.870 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:14.924 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:18.035 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:18.046 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:18.052 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:22.719 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:22.752 [http-nio-8014-exec-2] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:22.757 [http-nio-8014-exec-3] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:24.595 [http-nio-8014-exec-4] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:42.777 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:21:43.042 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 274 ms
+26-02-2024 15:22:01.900 [http-nio-8014-exec-6] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: Defect Knowledge Management
+26-02-2024 15:22:02.011 [http-nio-8014-exec-6] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 110 ms
+26-02-2024 15:22:08.600 [http-nio-8014-exec-8] INFO  c.c.Analyze.aspect.FeatureFlagAspect.checkFeatureFlag - Feature flag is enabled: Defect Knowledge Management
+26-02-2024 15:22:08.622 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DefectController.getAllDefectsBySolutionId() Execution time: 22 ms
+26-02-2024 15:22:22.032 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.DeploymentController.getDeploymentVariable() Execution time: 0 ms
+26-02-2024 15:22:22.041 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 9 ms
+26-02-2024 15:22:23.596 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 14 ms
+26-02-2024 15:24:25.886 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.createOrUpdateFeatureFlag() Execution time: 121 ms
+26-02-2024 15:24:25.909 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 6 ms
+26-02-2024 15:24:31.636 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.updateFeatureFlagStatus() Execution time: 31 ms
+26-02-2024 15:24:31.660 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 9 ms
+26-02-2024 15:24:51.304 [http-nio-8014-exec-9] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.createOrUpdateFeatureFlag() Execution time: 35 ms
+26-02-2024 15:24:51.330 [http-nio-8014-exec-1] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 8 ms
+26-02-2024 15:24:57.082 [http-nio-8014-exec-3] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.updateFeatureFlagStatus() Execution time: 42 ms
+26-02-2024 15:24:57.107 [http-nio-8014-exec-4] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 11 ms
+26-02-2024 15:25:18.551 [http-nio-8014-exec-7] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.createOrUpdateFeatureFlag() Execution time: 51 ms
+26-02-2024 15:25:18.566 [http-nio-8014-exec-5] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 6 ms
+26-02-2024 15:25:24.712 [http-nio-8014-exec-8] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.updateFeatureFlagStatus() Execution time: 66 ms
+26-02-2024 15:25:24.736 [http-nio-8014-exec-10] INFO  c.c.Analyze.logging.AspectLogging.logTimeMethod - Executing: com.capgemini.Analyze.controller.FeatureFlagController.getAllFeatureFlags() Execution time: 8 ms
+26-02-2024 16:31:58.675 [RMI TCP Connection(106)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+26-02-2024 16:31:58.876 [RMI TCP Connection(106)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 16:31:58.917 [RMI TCP Connection(106)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+26-02-2024 16:31:58.929 [RMI TCP Connection(106)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+26-02-2024 16:32:03.125 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarting - Starting AnalyzeOperationMicroserviceApplication using Java 17.0.3 on INLEN8520069187 with PID 18176 (C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice\target\classes started by bravivar in C:\Users\BRAVIVAR\Ravi\Genai\Backend\login\Analyze-Codes\Java\Analyze-Java\Analyze-operation-microservice)
+26-02-2024 16:32:03.128 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStartupProfileInfo - The following profiles are active: dev1
+26-02-2024 16:32:03.249 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-core\2.3.0.1\jaxb-core-2.3.0.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0.1/jaxb-api.jar
+26-02-2024 16:32:03.250 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls.logTo - The Class-Path manifest attribute in C:\Users\BRAVIVAR\.m2\repository\com\sun\xml\bind\jaxb-impl\2.3.1\jaxb-impl-2.3.1.jar referenced one or more files that do not exist: file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/jaxb-runtime-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/txw2-2.3.1.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/istack-commons-runtime-3.0.7.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/stax-ex-1.8.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/FastInfoset-1.2.15.jar,file:/C:/Users/BRAVIVAR/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.1/javax.activation-api-1.2.0.jar
+26-02-2024 16:32:03.250 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+26-02-2024 16:32:03.251 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+26-02-2024 16:32:04.231 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+26-02-2024 16:32:04.368 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 127 ms. Found 3 JPA repository interfaces.
+26-02-2024 16:32:05.566 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8014 (http)
+26-02-2024 16:32:05.574 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+26-02-2024 16:32:05.575 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.52]
+26-02-2024 16:32:05.718 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+26-02-2024 16:32:05.719 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2467 ms
+26-02-2024 16:32:05.947 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+26-02-2024 16:32:06.000 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.4.32.Final
+26-02-2024 16:32:06.111 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+26-02-2024 16:32:06.212 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+26-02-2024 16:32:06.617 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+26-02-2024 16:32:06.633 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+26-02-2024 16:32:07.534 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+26-02-2024 16:32:07.548 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+26-02-2024 16:32:09.384 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8014 (http) with context path ''
+26-02-2024 16:32:09.676 [restartedMain] INFO  c.c.A.AnalyzeOperationMicroserviceApplication.logStarted - Started AnalyzeOperationMicroserviceApplication in 7.102 seconds (JVM running for 8.343)
+26-02-2024 16:33:03.200 [http-nio-8014-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-02-2024 16:33:03.201 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+26-02-2024 16:33:03.206 [http-nio-8014-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms

@@ -9,7 +9,10 @@ public class DefectMasterEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bug_id")
+    @Column(name = "id")
+    private Long id;
+
+    @Column(name = "bug_id", nullable = false)
     private Long bugId;
 
     @Column(name = "title")
@@ -55,20 +58,27 @@ public class DefectMasterEntity {
     private String severity;
 
     @Column(name = "story_points")
-    private Integer storyPoints;
+    private Long storyPoints;
 
     @Column(name = "efforts")
-    private Integer efforts;
+    private Long efforts;
 
     @Column(name = "parent_feature_id")
     private Long parentFeatureId;
 
     @Column(name = "parent_feature_title")
     private String parentFeatureTitle;
-    
-    @Column(name = "solution_id")
+
+    @Column(name = "solution_id", nullable = false)
     private Long solutionId;
-    
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Long getBugId() {
 		return bugId;
@@ -190,19 +200,19 @@ public class DefectMasterEntity {
 		this.severity = severity;
 	}
 
-	public Integer getStoryPoints() {
+	public Long getStoryPoints() {
 		return storyPoints;
 	}
 
-	public void setStoryPoints(Integer storyPoints) {
+	public void setStoryPoints(Long storyPoints) {
 		this.storyPoints = storyPoints;
 	}
 
-	public Integer getEfforts() {
+	public Long getEfforts() {
 		return efforts;
 	}
 
-	public void setEfforts(Integer efforts) {
+	public void setEfforts(Long efforts) {
 		this.efforts = efforts;
 	}
 
@@ -229,7 +239,6 @@ public class DefectMasterEntity {
 	public void setSolutionId(Long solutionId) {
 		this.solutionId = solutionId;
 	}
-    
-    
-    
+
+   
 }
