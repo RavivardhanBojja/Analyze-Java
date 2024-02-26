@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capgemini.Analyze.dto.ResponseDTO;
-import com.capgemini.Analyze.dto.SignatureDTO;
 import com.capgemini.Analyze.entity.DefectMasterEntity;
-import com.capgemini.Analyze.service.DefectService;
 import com.capgemini.Analyze.service.RootCauseAnalysisService;
 
 @RestController
@@ -33,7 +31,7 @@ public class RootCauseAnalysisController {
         
         if (defects.isEmpty()) {
             ResponseDTO responseDTO = new ResponseDTO(null, "No open defects found for the solution ID: " + solutionId, "Not Found");
-            return new ResponseEntity<>(responseDTO, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(responseDTO, HttpStatus.OK);
         } else {
             ResponseDTO responseDTO = new ResponseDTO(defects, "Open Defects retrieved successfully",null);
             return new ResponseEntity<>(responseDTO, HttpStatus.OK);

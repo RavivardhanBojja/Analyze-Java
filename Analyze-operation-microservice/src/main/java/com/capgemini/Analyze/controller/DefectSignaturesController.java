@@ -1,6 +1,7 @@
 package com.capgemini.Analyze.controller;
 
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.Analyze.annotations.FeatureFlagAnnotation;
 import com.capgemini.Analyze.dto.DefectMasterDTO;
@@ -43,7 +43,7 @@ public class DefectSignaturesController {
 
 	    if (defectsWithSignatureStatus.isEmpty()) {
 	        ResponseDTO responseDTO = new ResponseDTO(null, "No closed DefectSignature found for the solution ID: " + solutionId, "Not Found");
-	        return new ResponseEntity<>(responseDTO, HttpStatus.NOT_FOUND);
+	        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
 	    } else {
 	        ResponseDTO responseDTO = new ResponseDTO(defectsWithSignatureStatus, "Closed DefectSignature retrieved successfully", null);
 	        return new ResponseEntity<>(responseDTO, HttpStatus.OK);
