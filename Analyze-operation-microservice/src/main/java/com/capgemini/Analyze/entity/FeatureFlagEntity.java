@@ -26,6 +26,9 @@ public class FeatureFlagEntity extends BasicEntity {
     @Column(name = "last_updated_by", nullable = false)
     private String lastUpdatedBy;
 
+    @Column(name = "last_updated", nullable = false)
+    private String lastUpdated;
+
     public String getFeatureName() {
         return featureName;
     }
@@ -71,6 +74,14 @@ public class FeatureFlagEntity extends BasicEntity {
 
     public void setLastUpdatedBy(String lastUpdatedBy) {
         this.lastUpdatedBy = lastUpdatedBy;
+    }
+
+    public String getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
     }
 
 }
